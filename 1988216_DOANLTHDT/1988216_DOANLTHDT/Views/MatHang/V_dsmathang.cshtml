@@ -1,0 +1,24 @@
+﻿@using _1988216_DOANLTHDT.Controllers;
+@using _1988216_DOANLTHDT.Entities;
+
+@{
+    Layout = null;
+    var PageTitle = "Danh sách mặt hàng";
+
+    C_MatHang c_MatHang = new C_MatHang();
+    List<MatHang> dsMH = c_MatHang.getDanhSachMatHang();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@PageTitle</title>
+</head>
+<body>
+    <div>
+    {@dsMH}
+    </div>
+</body>
+</html>
